@@ -1,10 +1,11 @@
 var mqtt = require('mqtt');
+let config = require('./config.json');
 
 class MqttHandler {
   constructor() {
     this.mqttClient = null;
     this.host = "wss://mqtt.flespi.io";
-    this.username = "YOUR_USERNAME"; // mqtt credentials if these are needed
+      this.username = config.key; // mqtt credentials if these are needed
     this.password = "YOUR_PASSWORD";
   }
 
